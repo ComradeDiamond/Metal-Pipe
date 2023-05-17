@@ -2,10 +2,15 @@
     "manifest_version": 3,
     "name": "Chromatic Pipe",
     "version": "1.0",
-    "action": {...
+    "action": {
+        "default_icon": {     
+          "16": "images/icon16.png"
+        },
+        "default_title": "Chromatic Pipe",
+        "default_popup": "./popup/popup.html"
     },
     "default_locale": "en",
-    "description": "MetalPipe.ogg 'nuff said",
+    "description": "*CLANK* *BONK* *BANG* *BOINK* - All for Chrome!",
     "icons": {
         "16": "./icons/pipe16.png",
         "48": "./icons/pipe48.png",
