@@ -1,0 +1,35 @@
+#headingSect
+{
+    padding: 5%;
+    text-align: center;
+}
+
+#headingSect > .firstHS
+{
+    font: 18pt "Trebuchet MS";
+}
+
+#headingSect > .secondHS
+{
+    font: 12pt "Verdana";
+}
+
+#barrier
+{
+    height: 10%;    
+}
+
+#selection
+{
+    background-color: #e7e7e7;
+    width: 100%;
+}
+
+#footer
+{
+    width: 96%;
+    padding: 2%;
+
+    font: 10pt "Verdana";
+    color: #a7a7a7;
+}

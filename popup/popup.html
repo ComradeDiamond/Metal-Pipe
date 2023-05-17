@@ -6,14 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <style>
-            html {
-                min-height: 10em;
-                min-width: 5em;
-                background: rgb(190, 190, 190);
+            html 
+            {
+                min-height: 20em;
+                min-width: 20em;
+                background: white;
+            }
+            body
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
             }
         </style>
+
+        <link rel="stylesheet" href="./popup.css" />
     </head>
     <body>
-        Hi!
+        <div id="headingSect">
+            <div class="firstHS">Chromatic Pipe</div>
+            <div class="secondHS">Things are about to get wonky</div>
+        </div>
+        <div id="barrier"></div>    <!--Using a div barrier here because didn't want to deal with CSS spacing-->
+
+        <!--This section selects the wonky sound that'll be displayed-->
+        <section id="selection">
+            Ooga Booga
+        </section>
+        
+        <div id="footer">
+            Chatotically brought to you by Justin Inc.
+        </div>
     </body>
 </html>
