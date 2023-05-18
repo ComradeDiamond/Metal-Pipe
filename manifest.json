@@ -3,8 +3,8 @@
     "name": "Chromatic Pipe",
     "version": "1.0",
     "action": {
-        "default_icon": {     
-          "16": "./icons/pipe16.png"
+        "default_icon": {
+            "16": "./icons/pipe16.png"
         },
         "default_title": "Chromatic Pipe",
         "default_popup": "./popup/popup.html"
@@ -17,5 +17,23 @@
     },
     "author": {
         "email": "JustinChen3946@gmail.com"
-    }
+    },
+    "permissions": [
+        "activeTab",
+        "input"
+    ],
+    "background": {
+        "service_worker": "./serviceworker.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "./script/boink.js"
+            ],
+            "match_about_blank": true,
+            "match_origin_as_fallback": true,
+            "run_at": "document_start"
+        }
+    ]
 }
