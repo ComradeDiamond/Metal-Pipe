@@ -22,9 +22,6 @@
         "activeTab",
         "storage"
     ],
-    "background": {
-        "service_worker": "./serviceworker.js"
-    },
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
@@ -39,7 +36,8 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "script/soundFiles/*.mp3"
+                "script/soundFiles/*.mp3",
+                "script/playSound.js"
             ],
             "matches": ["<all_urls>"]
         }

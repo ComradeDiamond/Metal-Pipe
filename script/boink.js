@@ -1,35 +1,35 @@
-document.addEventListener("keypress", playsound);
+import("./playSound.js")
+    .then(sound => {
 
-//Fetches the sound that the user selected in the popup
-//Then yeah! Play that thing!
-function playsound()
-{
-    chrome.storage.local.get("currentSound")
-        .then(soundName => {
-            console.log("done")
-
-            //Default sound
-            let selectedSound = "metalPipe";
-
-            if (soundName && soundName.currentSound)
-            {
-                selectedSound = soundName.currentSound;
-            }
-            else
-            {
-                //For the sake of consistency, just make metalPipe the default current sound
-                chrome.storage.local.set({"currentSound": "metalPipe"});
-            }
-
-            var sfURL = chrome.runtime.getURL(`./script/soundFiles/${selectedSound}.mp3`);
-            let sound = new Audio(sfURL);
-        
-            //Deletes the sound file from global execution context so garbage collection go brr and we don't get blamed for chrome lag
-            sound.play().then(() => {
-                delete sound;               
-            }).catch(() => {
-                delete sound;
-            });
-
+        //List of events we want to trigger for
+        [
+            "keypress",
+            "mousedown",
+            "scroll",
+            "load",
+            "copy",
+            "cut",
+            "paste",
+            "resize"
+        ].forEach(targetedEvent => {
+            document.addEventListener(targetedEvent, sound.playsound);
         });
+
+        //Randomly plays the sound. This is basically 10 hours of silence interrupted by ____________. Does it "recursively"
+        //First does initial random time
+        setTimeout(() => {
+            playAndTime(sound.playsound);
+        }, Math.random() * 1000 * 60);
+
+    }).catch(err => {
+        console.error(err);
+    });
+
+function playAndTime(playSoundFunc)
+{
+    playSoundFunc();
+
+    setTimeout(() => {
+        playAndTime(playSoundFunc);
+    }, Math.random() * 1000 * 60);
 }
