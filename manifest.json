@@ -20,7 +20,7 @@
     },
     "permissions": [
         "activeTab",
-        "input"
+        "storage"
     ],
     "background": {
         "service_worker": "./serviceworker.js"

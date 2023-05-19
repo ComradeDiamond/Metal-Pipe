@@ -28,15 +28,21 @@
             <div class="firstHS">Chromatic Pipe</div>
             <div class="secondHS">Things are about to get wonky</div>
         </div>
-        <div id="barrier"></div>    <!--Using a div barrier here because didn't want to deal with CSS spacing-->
+        <div id="barrier"></div>
 
         <!--This section selects the wonky sound that'll be displayed-->
+        <!--Not the most secure way of doing this (prolly should have DOM'd this), but this is 100% client-side so cybersecurity doesn't matter-->
         <section id="selection">
-            Ooga Booga
+            <img id="metalPipe" src="./images/metalPipe.png" />
+            <img id="robloxOof" src="./images/robloxOof.jpg" />
+            <img id="amogus" src="./images/amogus.jpg" />
+            <img id="moyai" src="./images/moyai.png" />
         </section>
         
         <div id="footer">
             Chatotically brought to you by Justin Inc.
         </div>
+
+        <script src="./popup.js"></script>
     </body>
 </html>
