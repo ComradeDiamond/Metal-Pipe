@@ -1,5 +1,5 @@
 //Confirms the initial funny storage setting. If it doesn't exist, make it metalPipe
-chrome.storage.sync.get("currentSound")
+chrome.storage.local.get("currentSound")
     .then(soundName => {
         if (soundName && soundName.currentSound)
         {
@@ -7,7 +7,7 @@ chrome.storage.sync.get("currentSound")
         }
         else
         {
-            chrome.storage.sync.set({"currentSound": "metalPipe"})
+            chrome.storage.local.set({"currentSound": "metalPipe"})
                 .then(() => {
                     document.getElementById("metalPipe").className = "chosen";
                 })
@@ -40,5 +40,5 @@ function processSelection(e, image, selectionName, ALL_SELECTIONS)
     image.className = "chosen";
 
     //Update current funny sound
-    chrome.storage.sync.set({"currentSound": selectionName});
+    chrome.storage.local.set({"currentSound": selectionName});
 }

@@ -39,7 +39,7 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "./*/script/soundFiles/metalPipe.mp3"
+                "./*/script/soundFiles/*.mp3"
             ],
             "matches": ["<all_urls>"]
         }
