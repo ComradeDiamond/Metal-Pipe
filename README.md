@@ -8,4 +8,4 @@ With this extension, you can turn your workspace into a college study session!* 
 <img src="https://i.imgflip.com/2pg2s7.jpg?a467736" />
 
 # A funny lil' video
-[![Demo Vid](https://youtu.be/DDu4uGkrY4E)](https://youtu.be/DDu4uGkrY4E)
+[![Demo Vid](https://i.imgur.com/UEwi2ra.png)](https://youtu.be/DDu4uGkrY4E)
