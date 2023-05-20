@@ -19,7 +19,6 @@
         "email": "JustinChen3946@gmail.com"
     },
     "permissions": [
-        "activeTab",
         "storage"
     ],
     "content_scripts": [
