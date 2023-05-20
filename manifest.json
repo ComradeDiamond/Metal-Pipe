@@ -29,8 +29,15 @@
                 "./script/boink.js"
             ],
             "match_about_blank": true,
-            "match_origin_as_fallback": true,
             "run_at": "document_start"
+        },
+        {
+            "matches": ["*://docs.google.com/document/*"],
+            "js": [
+                "./script/googledocs.js"
+            ],
+            "match_about_blank": true,
+            "run_at": "document_end"
         }
     ],
     "web_accessible_resources": [
